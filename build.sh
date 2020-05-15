@@ -1,1 +1,1 @@
-docker build . -t ajitchahal/nginx-2:latest
+docker build . -t ajitchahal/nginx-3:latest
