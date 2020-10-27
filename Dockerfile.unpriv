@@ -1,6 +1,6 @@
-FROM nginx
+FROM nginxinc/nginx-unprivileged
 
-
+USER 0:0
 RUN apt-get update -y
 RUN apt-get upgrade -y
 RUN apt-get install wget -y
@@ -15,4 +15,4 @@ COPY default.conf /etc/nginx/nginx.conf
 RUN  mkdir  /usr/share/nginx/pong/
 RUN mkdir /var/cache/nginx/client_temp
 COPY pong.htm /usr/share/nginx/pong/pong.htm
-#USER 1337:1337
+USER 1337:1337
