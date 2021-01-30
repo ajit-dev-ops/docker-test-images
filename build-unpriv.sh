@@ -7,3 +7,4 @@ docker stop nginx
 docker rm nginx
 docker run -d --name=nginx ajitchahal/nginx-unprivileged:latest  
 docker logs nginx
+docker ps
